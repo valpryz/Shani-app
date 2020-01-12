@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,908 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+/*------------------------
+        CSS commun
+--------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,,500,600,700|Source+Sans+Pro:400,600,700&display=swap');
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 768px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-size: 1.75em;
+    letter-spacing: -.5px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-size: 1.1em;
+    letter-spacing: -.5px;
+    /* margin: 10px; */
+}
+
+h4 {
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-size: 1.1em;
+    letter-spacing: -.9px;
+    /* margin: 10px; */
+}
+
+h5 {
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 1.3em;
+    letter-spacing: -1px;
+}
+
+h6 {
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 1.35em;
+    letter-spacing: -2px;
+}
+
+p{
+    font-family: 'Source Sans Pro'; 
+    font-size: 1.1em;
+}
+
+button {
+    background: #6fd8d3;
+    width: 150px;
+    height: 50px;
+    border: none;
+    color: white;
+    font-size: 1.3 em;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+/*------------------------
+        custom checkbox sur le site
+--------------------------*/
+
+/* input[type='checkbox'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid grey;
+    outline: none;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+input[type='checkbox']:checked {
+    background-color: #34495E;
+}
+
+input[type='checkbox']:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    /* box-shadow: 
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white; */
+    /* transform: rotate(45deg); */
+/* } */ 
+/*------------------------
+        header
+--------------------------*/
+header {
+    width: 100%;
+    height: 80px;
+    padding: 0 35px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul li{
+    list-style-type: none;
+    display: inline;
+    position: relative;
+    font-size: .9em;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.logo {
+    width: 120px;
+}
+
+.userInfos ul {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle {
+    padding-top: 5px;
+    margin-left: 30px;
+}
+
+.photoDeProfil img{
+    border-radius: 50%;
+}
+
+/*------------------------
+       Entete Administrateur et Teacher 
+--------------------------*/
+.entete {
+    padding: 0 35px;
+    height: 100px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*------------------------
+       carte apercu
+--------------------------*/
+.carte {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 230px;
+    height: 230px;
+    padding: 10px;
+    background: #eee;
+    box-shadow: 25px;
+}
+
+.number {
+    font-size: 1.7em;
+}
+
+
+/*------------------------
+       carte cours
+--------------------------*/
+
+.carte-cours {
+    width: 500px;
+    background: white;
+}
+
+.carte-cours img {
+    width: 480px;
+    margin-bottom: 18px;
+}
+
+/*------------------------
+       dropdown cours
+--------------------------*/
+
+/*------------------------
+       quiz item
+--------------------------*/
+.quiz-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee; 
+    height: 50px;
+    padding: 0 25px;
+}
+
+.quiz-item img {
+    display: none;
+}
+
+.quiz-item:hover img {
+    display: block;
+}
+
+/*------------------------
+       listing utilisateurs
+--------------------------*/
+
+.list-users h4{
+    text-transform: uppercase;
+    height: 70px;
+    background: #B8C5D0;
+    font-family: 'Montserrat';
+    padding: 25px 60px;
+}
+
+.list-user-card {
+    display: flex;
+    height: 100px;
+    background: #eee;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 40px 10px;
+}
+
+.list-user-card input,
+.list-user-card .img,
+.list-user-card label {
+    margin-right: 35px;
+    
+}
+
+.list-user-card .img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #B8C5D0;
+}
+
+.list-user-card label{
+    font-family: 'Source Sans Pro';
+    font-size: 1.2em;
+    word-spacing: 5px;
+    font-weight: 600;
+}
+
+.list-user-card label span {
+    text-transform: uppercase;
+}
+
+/*------------------------
+       barre de navigation
+--------------------------*/
+.navigation-tab > input,
+.navigation-tab section > div {
+    display: none;
+}
+
+#tab1:checked ~ section .tab1,
+#tab2:checked ~ section .tab2{
+    display: block;
+}
+
+.navigation-tab nav {
+    height: 70px;
+    background: #eee;  
+    padding-left: 50px; 
+}
+
+.navigation-tab nav ul{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    list-style-type: none;
+}
+.navigation-tab nav ul li{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 120px;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    letter-spacing: -1px;
+    justify-content: center;
+}
+
+
+#tab1:checked ~ nav ul > .tab1,
+#tab2:checked ~ nav ul > .tab2 {
+    border-bottom: 3px solid black;
+}
+
+/*------------------------
+       formulaire creation cours
+--------------------------*/
+.info-gnr {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.info-gnr select {
+    border: none;
+    background: transparent;
+    border: 1.45px solid rgba(51, 44, 44, 0.411);
+    font-family: 'Source Sans Pro';
+    font-size: 1.2em;
+    padding-left: 10px;
+}
+
+.info-gnr label {
+    padding-left: 10px;
+    font-size: .8em;
+    
+}
+
+.info-gnr > input,
+.categorie,
+.cout,
+.etiquette,
+.auteur,
+.prix {
+    width: 100%;
+    border: 1.45px solid rgba(51, 44, 44, 0.411);
+    height: 60px;
+    font-size: 1.2em;
+}
+
+.etiquette input,
+.auteur select,
+.prix input {
+    height: 100%;
+    border: none;
+}
+
+.etiquette,
+.auteur,
+.prix {
+    display: flex;
+    flex-direction: column;
+    justify-content: space space-between;
+}
+
+::placeholder {
+    font-size: 1.2em;
+    font-family: 'Source Sans Pro';
+    color: rgba(51, 44, 44, 0.411);
+    padding-left: 10px;
+}
+
+.info-gnr h2,
+.info-gnr #titre {
+    grid-column: span 4;
+}
+
+#categorie,
+#cout,
+.etiquette {
+    grid-column: span 2;
+}
+
+.auteur {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    height: 270px;
+}
+
+.content div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.img-cover {
+    height: auto;
+}
+.content img {
+    width: 480px;
+    height: auto;
+}
+
+.description p {
+    width: 450px;
+}
+
+.description > textarea {
+    width: 100%;
+    height: 70px;
+}
+
+.description textarea {
+    width: 100%;
+    font-family: 'Source Sans Pro';
+    font-size: 1.1em;
+    padding: 5px;
+}
+
+.inner-description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*------------------------
+       formulaire creation modules
+--------------------------*/
+.form-module-left select,
+.form-module-left input {
+    width: 100%;
+    height: 60px;
+    border: none;
+    background: transparent;
+    border: 1.45px solid rgba(51, 44, 44, 0.411);
+    font-family: 'Source Sans Pro';
+    font-size: 1.2em;
+    padding-left: 10px;
+}
+
+.form-module-left textarea {
+    width: 100%;
+    height: 100px;
+    font-family: 'Source Sans Pro';
+    font-size: 1.1em;
+    padding: 14px 8px;
+}
+
+.form-module-left > select {
+    width: 50%;
+}
+
+.module-creation button {
+    width: 65px;
+    height: 65px;
+    font-size: 2.2em;
+}
+
+.lecon-creation {
+    background: #eee;
+    display: grid;
+    grid-template-columns: 3fr 2fr 50px;
+    grid-gap: 10px 10px;
+}
+
+.attribution {
+    border: 2px solid grey;
+}
+
+.attribution select {
+    border: none;
+    width: 100%;
+    height: 80%;
+}
+
+.lecon-creation > img {
+    width: 480px;
+    height: 270px;
+}
+
+.add-image-module {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.add-image-module button {
+        background: #6fd8d3;
+        width: 150px;
+        height: 50px;
+        border: none;
+        color: white;
+        font-size: 1em;
+        text-transform: uppercase;
+        font-family: 'Montserrat';
+        font-weight: bold;
+}
+
+/*------------------------
+       formulaire creation quiz
+--------------------------*/
+
+.quiz .det {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 60px;
+}
+
+.type-quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1.5px solid #eee;
+}
+
+.type-quiz select {
+    height: 100%;
+    border: none;
+    background: none;
+    font-size: 1.1em;
+}
+
+.form-quiz-left button {
+    width: 65px;
+    height: 65px;
+    font-size: 2.2em;
+}
+
+.tab-quiz {
+    background: #eee;
+}
+
+.tab-quiz > input {
+    height: 60px;
+    font-size: 1.2em;
+    font-family: 'Source Sans Pro';
+    width: 95%;
+}
+
+.tab-quiz select {
+    height: 60px;
+    width: 250px;
+    border: 1px solid black;
+    background: none;
+    font-size: 1.2em;
+    padding: 15px;
+}
+
+.type-question {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.type-question input {
+    height: 60px;
+    font-size: 1.2em;
+}
+
+.add-question {
+    display: flex;
+    color: white;
+    align-items: center;
+    height: 65px;
+}
+
+.add-question button {
+    background: rgb(1, 1, 27);
+}
+
+.add-question h2 {
+    background: rgba(110, 109, 109, 0.473);
+    height: 100%;
+    margin: 0;
+    padding: 25px 15px;
+}
+
+.tab-question {
+    background: white;
+}
+
+.tab-question label {
+    font-size: 1.3em;
+}
+
+.bloc-question {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.bloc-question textarea {
+    width: 80%;
+    height: 90px;
+    font-size: 1.2em;
+    font-family: 'Source Sans Pro';
+}
+
+.add-choix {
+    display: flex;   
+}
+
+.bloc-choix{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column-gap: 10px;
+    align-items: center;
+}
+
+.bloc-choix input,
+.bloc-reponse input,
+.score input{
+    height: 60px;
+    font-size: 1.2em;
+    padding: 15px;
+}
+
+.bloc-reponse {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    grid-column-gap: 10px;
+    align-items: center;
+}
+
+.bloc-reponse p {
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+
+.score {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column-gap: 10px;
+    align-items: center;
+}
+
+/*------------------------
+       formulaire creation utilisateur
+--------------------------*/
+
+.form-create-user-left {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 10px;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.form-create-user-left h2 {
+    grid-column: span 2;
+}
+
+.form-create-user-left input,
+.form-create-user-left select {
+    height: 60px;
+    border: 1.3px solid lightgrey;
+    background: none;
+    font-size: 1.1em;
+}
+
+.form-create-user-left .valid {
+    display: flex;
+    align-items: center;
+}
+
+/*------------------------
+       admin searchbox
+--------------------------*/
+.searchbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchbox input{
+    height: 40px;
+    width: 30%;
+    background: #eee;
+    border: none;
+}
+
+.searchbox .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+}
+
+/*------------------------
+ teacher form module edit
+--------------------------*/
+.bloc-selection-cours {
+    display: grid;
+    width: 100% - 20px;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 1fr 1fr;
+
+}
+.bloc-selection-cours select {
+    height: 60px;
+    border: 1.3px solid lightgrey;
+    background: none;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+#resume-teacher {
+    width: 100%;
+    height: 100px;
+    font-family: 'Source Sans Pro';
+    font-size: 1.1em;
+    padding: 14px 8px;
+}
+
+.boutons-speciaux{
+    display: flex;
+
+}
+.boutons-speciaux button {
+    margin-right: 15px;
+    height: 60px;
+    border: 1.5px solid lightgrey;
+    background: none;
+    font-size: .75em;
+    text-transform: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/*------------------------
+ student course card
+--------------------------*/
+.student-course-card{
+    display: flex;
+    background: #eee;
+}
+.student-course-card img{
+    height: 150px; 
+    margin-right: 20px;
+}
+
+.student-course-card .texte{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.student-course-card .texte button {
+    align-self: flex-end;
+    margin-right: 15px;
+}
+
+/*------------------------
+ student profil card
+--------------------------*/
+.student-profile-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 35%;
+    background: #eee;
+    height: 250px;
+}
+
+.student-profile-card img {
+    border-radius: 50%;
+}
+
+/*------------------------
+ student course infos
+--------------------------*/
+.student-course-infos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.student-course-infos .titre{
+    grid-column: span 2;
+}
+
+/*------------------------
+ student formateur infos
+--------------------------*/
+.bloc-infos {
+    display: flex;
+}
+.bloc-infos img{
+    width: 100px;
+    height: 90px;
+    background: #eee;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/*------------------------
+ student quiz rendu box
+--------------------------*/
+.quiz-rendu-box {
+    height: 400px;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.quiz-rendu-box button {
+    align-self: center;
+}
+
+/*------------------------
+ student fleches lecon
+--------------------------*/
+
+.fleches-lecon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fleche-precedent,
+.fleche-suivant {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-between;
+}
+
+.fleches-lecon button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.fleche-suivant button {
+    background: #eee;
+    color: black;
+}
+
+/*------------------------
+ bloc demarrage
+--------------------------*/
+.bloc-demarrage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*------------------------
+ bloc login
+--------------------------*/
+.bloc-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bloc-login form {
+    display: flex;
+    flex-direction: column;
+}
+/*------------------------
+ bloc signup
+--------------------------*/
+.bloc-signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bloc-signup form {
+    display: flex;
+    flex-direction: column;
+}
+/*------------------------
+ bloc demo
+--------------------------*/
+.bloc-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*------------------------
+ bloc forget password
+--------------------------*/
+.bloc-forget-password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*------------------------
+ bloc nouveau pass
+--------------------------*/
+
+.bloc-nouveau-pass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

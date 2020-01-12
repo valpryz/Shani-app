@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hannibal Incubator</title>
+</head>
+<body>
+    <!-- Header -->
+    /******************************************************/ Header /******************************************************/
+    <header data-component="Header">
+        <div class="logo">
+            <a href="#"><img src="assets/images/logo-hannibal-incubator.png" alt="logo-hannibal-incubator"></a>
+        </div>
+        <div class="userInfos" data-component="InfoUtilisateur">
+            <ul>
+                <li><img src="assets/icon/notification/life-buoy.png" alt=""></li>
+                <li>Aide</li>
+                <li class="photoDeProfil"><img src="assets/images/Ebenezer_ofori.png" alt=""></li>
+                <li class="nom">Jean Ofori Ekamen</li>
+                <li class="toggle"><img src="assets/icon/navigation/expand_more_24px_outlined.svg" alt=""></li>
+            </ul>
+        </div>
+    </header>
+
+    /******************************************************/ Entete Administrateur et Teacher /******************************************************/
+    <div class="entete" data-component="EnteteDePage">
+        <h1>tableau de bord</h1>
+        <p>Retrouvez ici une vue d'ensemble des utilisateurs, cours, webinaires et groupes de discussion.</p>
+    </div>
+    /******************************************************/ carte apercu/******************************************************/
+    <div class="carte" data-component="Carte">
+        <img src="/assets/layers/professor-consultation.png" alt="">
+        <h6 class="number">0</h6>
+        <h6>Formateurs</h6>
+    </div>
+
+    /******************************************************/ carte cours/******************************************************/\
+    <div class="carte-cours" data-component="CarteDeCours">
+        <img src="assets/images/africanwomenwalking.jpg" alt="">
+        <h5>Bataillon des entrepreneurs panafricains</h5>
+    </div>
+
+    /******************************************************/ Dropdown cours/******************************************************/\
+
+    /******************************************************/ Quiz item/******************************************************/\
+    <div class="quiz-item" data-component="ItemDeQuiz">
+        <p>Lecon 1 Le panafricanisme economique</p>
+        <img src="assets/icon/navigation/expand_more_24px_outlined.svg" alt="">
+    </div>
+
+    /******************************************************/ listing utilisateurs/******************************************************/\
+    <div class="list-users" data-component="ListingUtilisateurs">
+        <h4>nom</h4>
+        <div class="list-user-card" data-component="CarteDuListing">
+            <input type="checkbox" name="" id="cardName">
+            <div class="img"></div>
+            <label for="userName" class="cardName"><span>Mbouopda</span> Carine Diane</label>
+        </div> 
+            <!-- <div class="options">
+                
+        </div>       
+            </div>
+        </div> -->
+    </div>
+
+    /******************************************************/ barre de navigation/******************************************************/\
+    <div class="navigation-tab" data-component="NavigationTab">
+        <input checked="checked" type="radio" name="tab" id="tab1">
+        <input type="radio" name="tab" id="tab2">
+        <nav>
+            <ul>
+                <li class="tab1">
+                    <label for="tab1">apercu</label>
+                </li>
+                <li class="tab2">
+                    <label for="tab2">utilisateurs</label>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <div class="tab1">
+                <div class="carte-cours">
+                        <img src="assets/images/africanwomenwalking.jpg" alt="">
+                        <h5>Bataillon des entrepreneurs panafricains</h5>
+                    </div>
+            </div>
+            <div class="tab2">
+                <div class="quiz-item">
+                        <p>Lecon 1 Le panafricanisme economique</p>
+                        <img src="assets/icon/navigation/expand_more_24px_outlined.svg" alt="">
+                    </div>
+            </div>
+        </section>
+    </div>
+
+    /******************************************************/ formulaire creation cours/******************************************************/\
+
+    <form data-component="FormCreationCours">
+        <div class="form-course-left">
+            <div class="info-gnr">
+                    <h2>informations generales</h2>
+                    <input type="text" name="" id="titre" placeholder="Bataillon des entrepreneurs panafricains">
+                    <input type="text" name="categorie" id="categorie" placeholder="Categorie">
+                    <select name="cout" id="cout"> 
+                            <option value="cout">Cout</option>
+                    </select>
+                    <div class="etiquette">
+                        <label for="etiquette">Etiquettes</label>
+                        <input type="text" name="etiquette" id="etiquette" placeholder="Ajouter des etiquettes a votre cours">
+                    </div>
+                    <div class="auteur">
+                        <label for="auteur">Auteur</label>
+                        <select name="auteur" id="auteur">
+                            <option value="">Fabrice Fernand Fangwa</option>
+                        </select>
+                    </div>
+                    <div class="prix">
+                        <label for="prix">Prix</label>
+                        <input type="text" name="prix" id="prix" placeholder="Laisser vide si gratuit">
+                    </div>
+                </div>
+                <div class="img-cover">
+                    <h2>Image de couverture</h2>
+                    <div class="content">
+                        <div>
+                            <p>This is the first image attendees will see at the top of your listing. Use a high quality image: 1280x720px (16:9 ratio).</p>
+                            <button>Ajouter Image</button>
+                        </div>
+                        <img src="assets/images/africanwomenwalking.jpg" alt="">
+                    </div>
+                </div>
+                <div class="description">
+                    <h2>description</h2>
+                    <p>Add more details to your event like schedule, sponsors, or featured guests.</p>
+                    <textarea name="description" id="description" cols="30" rows="10">Learn inbound marketing techniques that range from content creation to social promotion to converting and nurturing leads and beyond. By the end of this certification course, you'll be well on your way to building your inbound marketing strategy.</textarea>
+                    <div class="inner-description">
+                        <div class="bloc-detail">
+                            <h2>Details de la formation</h2>
+                            <textarea name="details-formation" id="details-formation" cols="30" rows="10">
+                                4 modules
+            
+                                15 lecons
+            
+                                7 videos
+            
+                                4 quizzes
+            
+                                3hr14 minutes completion time
+                            </textarea>
+                        </div>
+                        <div class="bloc-avantage">
+
+                            <h2>avantages de la formation</h2>
+                            <textarea name="avantages-formation" id="avantages-formation" cols="30" rows="10">
+                                Learn about inbound marketing techniques
+            
+                                Develop understanding of core tactics of inbound marketing
+            
+                                Advance your skills as an inbound marketer
+                            </textarea>
+                        </div>    
+                    </div>
+        
+                </div>
+        </div>
+        <div class="form-course-right">
+            <button>enregistrer</button>
+        </div>
+    </form>
+    /******************************************************/ formulaire creation modules/******************************************************/\
+    <form data-component="FormCreationModule">
+       <div class="form-module-left">
+            <select name="course" id="course">
+                    <option value="course-1">Bataillon des entrepreneurs panafricains</option>
+            </select>
+    
+            <div class="module-creation">
+                <input type="text" name="titre" id="titre" placeholder="Initiation a l'entreprenariat">
+                <h4>resume du module</h4>
+                <textarea name="resume" id="resume" cols="30" rows="10">Learn inbound marketing techniques that range from content creation to social promotion to converting and nurturing leads and beyond. By the end of this certification course, you'll be well on your way to building your inbound marketing strategy.</textarea>
+                <h4>lecons</h4>
+                <button>+</button>
+                <div class="lecon-creation" data-component="ModuleLeconCreation">
+                    <input type="text" name="titre" id="titre" placeholder="le panafricanisme economique">
+                    <div class="attribution">
+                        <label for="attribution">Attribue a</label>
+                        <select name="attribution" id="attribution">
+                            <option value="">Fabrice Fernand Fangwa</option>
+                        </select>
+                    </div>
+                    <a href="#"><img src="assets/icon/navigation/expand_more_24px_outlined.svg" alt=""></a>
+                    <img src="assets/images/africanwomenwalking.jpg" alt="">
+                    <div class="add-image-module">
+                        <p><span>image/video a la une</span> this is the first image attendees will see at the top of your listing. Use a high quality image: 1280x720px (16:9 ratio).</p>
+                        <button>Ajouter Image</button>
+                    </div>
+                </div>
+                <button>+</button>
+            </div>
+       </div>
+       <div class="form-module-right">
+           <button>enregistrer</button>
+       </div>
+    </form>
+    /******************************************************/ formulaire creation quiz/******************************************************/\
+    <form data-component="FormCreationQuiz">
+        <div class="form-quiz-left">
+            <div class="quiz">
+                <h2>details sur le quiz</h2>
+                <div class="det">
+                    <input type="text" placeholder="titre du quiz">
+                    <div class="type-quiz">
+                        <label for="type-quiz">Type de quiz</label>
+                        <select name="lecon" id="lecon">
+                            <option value="lecon">Lecon</option>
+                        </select>
+                    </div>
+                </div>
+                <h2>parametres du quiz</h2>
+                <h2>modules</h2>
+                <p><em>si vous creez un quiz pour le cours, alors module correspond a un module. Si vous creez un quiz pour la lecon, alors vous n'avez pas besoin de creer un module supplementaire.</em></p>
+            </div>
+            <button>+</button>
+            <div class="tab-quiz" data-component="QuizTab">
+                <input type="text" name="titre" id="titre" placeholder="titre du module">
+                <a href="#"><img src="assets/icon/navigation/expand_more_24px_outlined.svg" alt=""></a>
+                <p><em>Si vous creez un quiz pour la lecon, alors vous n'avez pas besoin de donner un titre au module, celui du quiz suffira.</em></p>
+                <h2>questions</h2>
+                <div class="type-question">
+                    <select name="type-question" id="type-question">
+                        <option value="">Type de question</option>
+                        <option value="">Choix unique</option>
+                        <option value="">choix multiples</option>
+                    </select>
+                    <p>Chronometre</p>
+                    <input type="number" name="temps" id="temps">
+                    <label for="temps">Min</label>
+                </div>
+                <div class="add-question">
+                    <button>+</button>
+                    <h2>ajouter une question</h2>
+                </div>
+                <div class="tab-question">
+                    <div class="bloc-question" data-component="TabQuestionDeQuiz">
+                        <label for="question">Question</label>
+                        <textarea name="question" id="question" cols="30" rows="10"></textarea>
+                        <a href="#"><img src="assets/icon/navigation/expand_more_24px_outlined.svg" alt=""></a>
+                    </div>
+                    <div class="add-choix">
+                        <a href="#"><img src="assets/icon/navigation/expand_more_24px_outlined.svg" alt=""></a>
+                        <p>Ajouter un choix</p>
+                    </div>
+                    <div class="bloc-choix">
+                        <label for="choix">1.</label>
+                        <input type="text" name="choix" id="choix">
+                        <a href="#"><img src="assets/icon/navigation/expand_more_24px_outlined.svg" alt=""></a>
+                    </div>
+                    <div class="bloc-reponse">
+                        <label for="reponse">Reponse correcte</label>
+                        <input type="text" name="reponse" id="reponse" placeholder="1,2">
+                        <p>utiliser la virgule(,) pour les reponses multiples</p>
+                    </div>
+                    <div class="score">
+                        <label for="score">Points</label>
+                        <input type="number" name="score" id="score">
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div class="form-quiz-right">
+            <button>Enregistrez</button>
+        </div>
+    </form>
+
+    /******************************************************/ formulaire creation utilisateur/******************************************************/\
+    <form data-component="FormCreationUtilisateur">
+        <div class="form-create-user-left">
+            <h2>Informations generales</h2>
+            <label for="email">Adresse de messagerie</label>
+            <input type="text" name="email" id="email">
+            <label for="prenom">Prenom</label>
+            <input type="text" name="prenom" id="prenom">
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom">
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password">
+            <label for="password-confirm">Confirmer mot de passe</label>
+            <input type="password" name="password-confirm" id="password-confirm">
+            <label for="role">Role</label>
+            <select name="role" id="role">
+                <option value="">Administrateur</option>
+                <option value="">Professeur</option>
+            </select>
+            <label for="send-mail">Envoyez une notification a l'utilisateur</label>
+            <div class="valid">
+                <input type="checkbox" name="send-mail" id="send-mail"> 
+                <p>Envoyer un message au nouvel utilisateur a propos de son compte.</p>
+            </div>
+        </div>
+        <div class="form-create-user-right">
+            <button>Creer</button>
+        </div>
+    </form>
+
+    /******************************************************/ admin searchbox/******************************************************/\
+    <div class="searchbox" data-component="RechercheUtilisateur">
+        <div class="title">
+            <h1>formateurs</h1>
+        <a href="#"><img src="assets/icon/navigation/expand_more_24px_outlined.svg" alt=""></a>
+        </div>
+        <input type="text" name="searchbox" id="searchbox">
+    </div>
+    /******************************************************/ formulaire edition de cours Teacher
+    ******************************************************/\
+    <form data-component="FormEditionCoursTeacher">
+        <div class="form-teacher-left">
+            <div class="bloc-selection-cours" data-component="SelectionCoursAModifier">
+                <select name="" id="cours-selection">
+                    <option value="">Bataillon des entrepreneurs panafricains</option>
+                </select>
+                <select name="" id="module-selection">
+                    <option value="">Module 2</option>
+                </select>
+                <select name="" id="lecon-selection">
+                    <option value="">Lecon 1</option>
+                </select>
+            </div>
+    
+            <h4>initiation a l'entreprenariat</h4>
+    
+            <h4>resume de la lecon</h4>
+            <textarea name="resume-teacher" id="resume-teacher" >Learn inbound marketing techniques that range from content creation to social promotion to converting and nurturing leads and beyond. By the end of this certification course, you'll be well on your way to building your inbound marketing strategy.</textarea>
+            <div class="composants"></div>
+            <div class="boutons-speciaux" data-component="BoutonsSpeciaux">
+                <button><i><img src="assets/icon/navigation/expand_more_24px_outlined.svg" alt=""></i>Ajouter texte</button>
+                <button><i><img src="assets/icon/navigation/expand_more_24px_outlined.svg" alt=""></i>Ajouter media</button>
+                <button><i><img src="assets/icon/navigation/expand_more_24px_outlined.svg" alt=""></i>Ajouter quiz</button>
+            </div>
+            <h4>ressources de la lecon</h4>
+        </div>
+        <div class="form-teacher-right">
+            <button>enregistrer</button>
+        </div>
+    </form>
+
+    /******************************************************/ student course card
+    ******************************************************/\
+    <div class="student-course-card" data-component="CarteCoursEtudiant">
+        <img src="assets/images/africanwomenwalking.jpg" alt="">
+        <div class="texte">
+            <h2>bataillon des entrepreneurs panafricains</h2>
+            <p>Demarre le 24 sept.2018</p>
+            <button>reprendre</button>
+        </div>
+    </div>
+    /******************************************************/ student profile card
+    ******************************************************/\
+    <div class="student-profile-card" data-component="CarteProfilEtudiant">
+        <img src="assets/images/Ebenezer_ofori.png" alt="">
+        <p>Jean Ofori Ekamen</p>
+        <p class="email">jean.ofori@gmail.com</p>
+        <button>commencer</button>
+    </div>
+
+    /******************************************************/ student course infos
+    ******************************************************/\
+
+    <div class="student-course-infos" data-component="InfosDuCours">
+        <div class="titre">
+        <h1>bataillon des entrepreneurs panafricains</h1>
+        <p>Learn inbound marketing techniques that range from content creation to social promotion to converting and nurturing leads and beyond. By the end of this certification course, you'll be well on your way to building your inbound marketing strategy.</p>
+        </div>
+        <div class="details-formation">
+            <h4>details de la formation</h4>
+            <ul>
+                <li>4 modules</li>
+                <li>15 lecons</li>
+                <li>7 videos</li>
+                <li>4 quizzes</li>
+                <li>3hr14 minutes completion time</li>
+            </ul>
+        </div>
+        <div class="avantages-formation">
+            <h4>avantages de la formation</h4>
+            <ul>
+                <li>Learn about inbound marketing techniques</li>
+                <li>Develop understanding of core tactics of inbound marketing</li>
+                <li>Advance your skills as an inbound marketer</li>
+            </ul>
+        </div>
+    </div>
+
+    /******************************************************/ student formateur infos
+    ******************************************************/\
+
+    <div class="student-formateur-infos" data-component="CarteDuFormateur">
+        <h1>formateur</h1>
+        <div class="bloc-infos">
+            <img src="" alt="">
+            <div class="text">
+                <h4>henri lotin</h4>
+                <p>Designer graphique & UX/UI base a Douala, Cameroun. Je suis le directeur creatif et le cofondateur de Lotin Corp. a douala, au Cameroun. Et depuis Octobre 2014, je suis le fondateur de la Lotin Corp. Academy.</p>
+            </div>
+        </div>
+    </div>
+
+    /******************************************************/ student quiz rendu box
+    ******************************************************/\
+    <div class="quiz-rendu-box" data-component="QuizBoxEtudiant">
+        <h1>Quizz</h1>
+        <p>Design Thinking is suited to problems which:</p>
+        <p>(3 points)</p>
+        <ul>
+            <li>Need to be only visually solved</li>
+            <li>Require a more holistic approach and mindset to solve</li>
+            <li>Require a graphic designer's ability to see the solution</li>
+        </ul>
+        <button>valider</button>
+    </div>
+    /******************************************************/ student fleches lecon
+    ******************************************************/\
+    <div class="fleches-lecon" data-component="FlechesLecon">
+        <div class="fleche-precedent">
+            <button><-</button>
+            <h4>lecon precedente</h4>
+        </div>
+        <div class="fleche-suivant">
+            <h4>lecon suivante</h4>
+            <button>-></button>
+        </div>
+    </div>
+    /******************************************************/ bloc demarrage
+    ******************************************************/\
+    <div class="bloc-demarrage" data-component="BlocDemarrage">
+        <img src="assets/images/logo-hannibal-incubator.png" alt="logo-hannibal-incubator">
+        <h1>Vous n'avez pas encore de compte sur Hannibal Incubator?</h1>
+        <p>Plus de 820 futurs entrepreneurs sont deja sur la plateforme, pour beneficier de tous nos avantages.</p>
+        <button>demarrer</button>
+    </div>
+    /******************************************************/ bloc login
+    ******************************************************/\
+    <div class="bloc-login" data-component="BlocLogin">
+        <h1>Connectez-vous a My Hannibal Incubator</h1>
+        <form action="">
+            <input type="text" name="identifiant" id="identifiant">
+            <input type="password" name="mot-de-passe" id="mot-de-passe">
+            <input type="checkbox" name="cochez" id="cochez">
+            <label for="cochez">Se souvenir de moi</label>
+            <button>se connecter</button>
+        </form>
+        <a href="#">Mot de passe oublie ?</a>
+    </div>
+
+    /******************************************************/ bloc signup
+    ******************************************************/\
+    <div class="bloc-signup" data-component="BlocSignUp">
+        <img src="assets/images/logo-hannibal-incubator.png" alt="logo-hannibal-incubator">
+        <h1>Creer un compte</h1>
+        <form action="">
+            <input type="text" name="prenom" id="prenom">
+            <input type="text" name="nom" id="nom">
+            <input type="password" name="pass" id="pass">
+            <input type="text" name="courriel" id="courriel">
+            <input type="text" name="" id="mobile">
+            <input type="text" name="" id="pays">
+            <button>envoyer</button>
+        </form>
+        <p>Deja inscrit ? <a href="#">Connectez-vous</a></p>
+    </div>
+    /******************************************************/ bloc demo
+    ******************************************************/\
+    <div class="bloc-demo" data-component="BlocDemo">
+        <img src="" alt="">
+        <h1>formation digitale</h1>
+        <p>Un acces a des cours ecrits et audiovisuels par des professionnels de haut niveau qui vous permettront de structurer votre projet, de comprendre les enjeux de ce choix de vie.</p>
+    </div>
+    /******************************************************/ bloc forget password
+    ******************************************************/\
+    <div class="bloc-forget-password" data-component="BlocForgetPass">
+        <h1>Mot de passe oublie ?</h1>
+        <p>Pour recuperer/modifier votre mot de passe, saisissez votre adresse email et cliquez sur le lien dans le message.</p>
+        <input type="text">
+        <button>envoyer</button>
+    </div>
+    /******************************************************/ bloc nouveau pass
+    ******************************************************/\
+    <div class="bloc-nouveau-pass" data-component="BlocNewPass">
+        <p>Veuiller entrer et confirmer votre nouveau mot de passe.</p>
+        <input type="password" name="" id="">
+        <input type="password" name="" id="">
+        <button>envoyer</button>
+    </div>
+</body>
+</html>
