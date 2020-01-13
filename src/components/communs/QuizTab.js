@@ -1,11 +1,12 @@
 import React from "react";
 import TabQuestionDeQuiz from "./TabQuestionDeQuiz";
+import expand from './assets/icon/navigation/expand_more_24px_outlined.svg'
 
 class QuizTab extends React.Component {
   render() {
     return <div className="tab-quiz">
   <input type="text" name="titre" id="titre" placeholder="titre du module" />
-  <a href="#"><img src="assets/icon/navigation/expand_more_24px_outlined.svg" alt /></a>
+  <img src={expand} alt='expand' />
   <p><em>Si vous creez un quiz pour la lecon, alors vous n'avez pas besoin de donner un titre au module, celui du quiz suffira.</em></p>
   <h2>questions</h2>
   <div className="type-question">
@@ -25,13 +26,13 @@ class QuizTab extends React.Component {
   <div className="tab-question">
     <TabQuestionDeQuiz></TabQuestionDeQuiz>
     <div className="add-choix">
-      <a href="#"><img src="assets/icon/navigation/expand_more_24px_outlined.svg" alt /></a>
+      <img src={expand} alt='expand' />
       <p>Ajouter un choix</p>
     </div>
     <div className="bloc-choix">
       <label htmlFor="choix">1.</label>
       <input type="text" name="choix" id="choix" />
-      <a href="#"><img src="assets/icon/navigation/expand_more_24px_outlined.svg" alt /></a>
+      <img src={expand} alt='expand' />
     </div>
     <div className="bloc-reponse">
       <label htmlFor="reponse">Reponse correcte</label>

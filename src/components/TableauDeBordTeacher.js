@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Header from './communs/Header';
 import EnteteDePage from './communs/EnteteDePage';
-import NavigationTab from './communs/NavigationTab';
+import NavigationTabTeacher from './communs/NavigationTabTeacher';
 
 const TouteLaPage = styled.div`
     display: grid;
@@ -10,17 +10,17 @@ const TouteLaPage = styled.div`
 
 `
 
-class TableauDeBordAdmin extends React.Component {
+class TableauDeBordTeacher extends React.Component {
   render(){
     return (
       <TouteLaPage>
         <Header />
         <EnteteDePage />
-        <NavigationTab />
+        <NavigationTabTeacher />
       </TouteLaPage>
     );
   }
   
 }
 
-export default TableauDeBordAdmin;
+export default TableauDeBordTeacher;
