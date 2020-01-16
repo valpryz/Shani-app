@@ -14,7 +14,7 @@ const WrapperLeft = styled.div`
 `
 
 const WrapperRight = styled.div`
-
+  margin: 0 auto;
 `
 
 class FormCreationCours extends React.Component {
@@ -24,7 +24,7 @@ class FormCreationCours extends React.Component {
         <WrapperFull>
           <WrapperLeft>
             <div className="info-gnr">
-              <h2>informations generales</h2>
+              <h2>informations gÉnÉrales</h2>
               <input type="text" name id="titre" placeholder="Bataillon des entrepreneurs panafricains" />
               <input type="text" name="categorie" id="categorie" placeholder="Categorie" />
               <select name="cout" id="cout"> 
@@ -37,7 +37,7 @@ class FormCreationCours extends React.Component {
               <div className="auteur">
                 <label htmlFor="auteur">Auteur</label>
                 <select name="auteur" id="auteur">
-                  <option value>Fabrice Fernand Fangwa</option>
+                  <option value='nothing'>Fabrice Fernand Fangwa</option>
                 </select>
               </div>
               <div className="prix">
@@ -57,16 +57,16 @@ class FormCreationCours extends React.Component {
             </div>
             <div className="description">
             <h2>description</h2>
-            <p>Add more details to your event like schedule, sponsors, or featured guests.</p>
-            <textarea name="description" id="description" cols={30} rows={10} defaultValue={"Learn inbound marketing techniques that range from content creation to social promotion to converting and nurturing leads and beyond. By the end of this certification course, you'll be well on your way to building your inbound marketing strategy."} />
+            
+            <textarea name="description" id="description" cols={30} rows={10}  />
             <div className="inner-description">
               <div className="bloc-detail">
-                <h2>Details de la formation</h2>
-                <textarea name="details-formation" id="details-formation" cols={30} rows={10} defaultValue={"                                4 modules\n            \n                                15 lecons\n            \n                                7 videos\n            \n                                4 quizzes\n            \n                                3hr14 minutes completion time\n                            "} />
+                <h2>DÉtails de la formation</h2>
+                <textarea name="details-formation" id="details-formation" cols={30} rows={10} />
               </div>
               <div className="bloc-avantage">
                 <h2>avantages de la formation</h2>
-                <textarea name="avantages-formation" id="avantages-formation" cols={30} rows={10} defaultValue={"                                Learn about inbound marketing techniques\n            \n                                Develop understanding of core tactics of inbound marketing\n            \n                                Advance your skills as an inbound marketer\n                            "} />
+                <textarea name="avantages-formation" id="avantages-formation" cols={30} rows={10}  />
               </div>    
             </div>
           </div>

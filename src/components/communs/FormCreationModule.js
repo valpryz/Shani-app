@@ -14,7 +14,7 @@ const WrapperLeft = styled.div`
 `
 
 const WrapperRight = styled.div`
-
+  margin: 0 auto;
 `
 
 class FormCreationModule extends React.Component {

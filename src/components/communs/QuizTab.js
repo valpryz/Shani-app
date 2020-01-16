@@ -1,12 +1,14 @@
 import React from "react";
 import TabQuestionDeQuiz from "./TabQuestionDeQuiz";
 import expand from './assets/icon/navigation/expand_more_24px_outlined.svg'
+import deletion from './assets/icon/action/delete_24px_outlined.svg'
+import addChoice from './assets/icon/content/add_circle_outline_24px_outlined.png'
 
 class QuizTab extends React.Component {
   render() {
     return <div className="tab-quiz">
   <input type="text" name="titre" id="titre" placeholder="titre du module" />
-  <img src={expand} alt='expand' />
+  <button className='button-poubelle'><img src={deletion} /></button>
   <p><em>Si vous creez un quiz pour la lecon, alors vous n'avez pas besoin de donner un titre au module, celui du quiz suffira.</em></p>
   <h2>questions</h2>
   <div className="type-question">
@@ -20,19 +22,19 @@ class QuizTab extends React.Component {
     <label htmlFor="temps">Min</label>
   </div>
   <div className="add-question">
-    <button>+</button>
+    <button className='button-square'>+</button>
     <h2>ajouter une question</h2>
   </div>
   <div className="tab-question">
     <TabQuestionDeQuiz></TabQuestionDeQuiz>
     <div className="add-choix">
-      <img src={expand} alt='expand' />
+      <button className='button-poubelle'><img src={addChoice} /></button>
       <p>Ajouter un choix</p>
     </div>
     <div className="bloc-choix">
       <label htmlFor="choix">1.</label>
       <input type="text" name="choix" id="choix" />
-      <img src={expand} alt='expand' />
+      <button className='button-poubelle'><img src={deletion} /></button>
     </div>
     <div className="bloc-reponse">
       <label htmlFor="reponse">Reponse correcte</label>

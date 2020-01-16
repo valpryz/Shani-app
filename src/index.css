@@ -30,7 +30,7 @@ body {
 h1 {
     text-transform: uppercase;
     font-family: 'Montserrat';
-    font-size: 1.75em;
+    font-size: 1.9em;
     letter-spacing: -.5px;
 }
 
@@ -39,7 +39,7 @@ h2 {
     font-family: 'Montserrat';
     font-size: 1.1em;
     letter-spacing: -.5px;
-    /* margin: 10px; */
+    margin: 25px auto;
 }
 
 h4 {
@@ -77,10 +77,28 @@ button {
     height: 50px;
     border: none;
     color: white;
-    font-size: 1.3 em;
+    font-size: 1em;
     text-transform: uppercase;
     font-family: 'Montserrat';
-    font-weight: bold;
+    font-weight: 500;
+}
+
+.button-square {
+    background: #6fd8d3;
+    width: 65px;
+    height: 65px;
+    font-size: 2.2em;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+.button-poubelle {
+    background: none;
+    border: none;
+    width: auto;
 }
 
 /*------------------------
@@ -177,6 +195,7 @@ header ul li{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 25px 0;
 }
 
 /*------------------------
@@ -300,7 +319,7 @@ header ul li{
 }
 
 .navigation-tab nav {
-    height: 50px;
+    height: 55px;
     background: #eee;  
     padding-left: 35px; 
 }
@@ -318,7 +337,7 @@ header ul li{
     width: 150px;
     text-transform: uppercase;
     font-family: 'Montserrat';
-    font-weight: 800;
+    font-weight: 700;
     font-size: .98em;
     justify-content: center;
 }
@@ -337,8 +356,10 @@ header ul li{
 --------------------------*/
 .info-gnr {
     display: grid;
+    width: calc(100% - 60px);
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
 }
 
 .info-gnr select {
@@ -346,7 +367,7 @@ header ul li{
     background: transparent;
     border: 1.45px solid rgba(51, 44, 44, 0.411);
     font-family: 'Source Sans Pro';
-    font-size: 1.2em;
+    font-size: 1.1em;
     padding-left: 10px;
 }
 
@@ -365,7 +386,7 @@ header ul li{
     width: 100%;
     border: 1.45px solid rgba(51, 44, 44, 0.411);
     height: 60px;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .etiquette input,
@@ -393,6 +414,8 @@ header ul li{
 .info-gnr h2,
 .info-gnr #titre {
     grid-column: span 4;
+    margin: 0;
+    font-size: 1.2em;
 }
 
 #categorie,
@@ -420,6 +443,7 @@ header ul li{
 
 .img-cover {
     height: auto;
+    margin: 30px auto;
 }
 .content img {
     width: 480px;
@@ -428,6 +452,7 @@ header ul li{
 
 .description p {
     width: 450px;
+    margin-bottom: 10px;
 }
 
 .description > textarea {
@@ -445,6 +470,7 @@ header ul li{
 .inner-description {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
 }
 
 /*------------------------
@@ -527,7 +553,14 @@ header ul li{
 .quiz .det {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    height: 60px;
+    height: 65px;
+    grid-column-gap: 20px;
+}
+
+
+
+.det ::placeholder {
+    font-size: 1.6em;
 }
 
 .type-quiz {
@@ -535,6 +568,7 @@ header ul li{
     flex-direction: column;
     justify-content: space-between;
     border: 1.5px solid #eee;
+    padding: 5px;
 }
 
 .type-quiz select {
@@ -552,6 +586,8 @@ header ul li{
 
 .tab-quiz {
     background: #eee;
+    padding: 15px 70px;
+    margin-bottom: 2px;
 }
 
 .tab-quiz > input {
@@ -559,6 +595,7 @@ header ul li{
     font-size: 1.2em;
     font-family: 'Source Sans Pro';
     width: 95%;
+    margin-right: 9px;
 }
 
 .tab-quiz select {
@@ -577,6 +614,10 @@ header ul li{
     align-items: center;
 }
 
+.type-question select {
+    width: 320px;
+}
+
 .type-question input {
     height: 60px;
     font-size: 1.2em;
@@ -587,6 +628,7 @@ header ul li{
     color: white;
     align-items: center;
     height: 65px;
+    margin: 20px 0;
 }
 
 .add-question button {
@@ -613,6 +655,7 @@ header ul li{
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    padding: 25px;
 }
 
 .bloc-question textarea {
@@ -620,10 +663,17 @@ header ul li{
     height: 90px;
     font-size: 1.2em;
     font-family: 'Source Sans Pro';
+    margin-bottom: 15px;
 }
 
 .add-choix {
     display: flex;   
+}
+
+.add-choix button {
+    position: relative;
+    top: -13px;
+    margin-right: 4px;
 }
 
 .bloc-choix{
@@ -631,6 +681,7 @@ header ul li{
     grid-template-columns: 1fr 2fr 1fr;
     grid-column-gap: 10px;
     align-items: center;
+    margin: 15px 0;
 }
 
 .bloc-choix input,
@@ -658,6 +709,7 @@ header ul li{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-column-gap: 10px;
+    grid-row-gap: 10px;
     align-items: center;
 }
 
@@ -789,7 +841,7 @@ header ul li{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 35%;
+    width: 100%;
     background: #eee;
     height: 250px;
 }
@@ -818,7 +870,7 @@ header ul li{
 }
 .bloc-infos img{
     width: 100px;
-    height: 90px;
+    height: 100px;
     background: #eee;
     border-radius: 50%;
     margin-right: 15px;
@@ -929,6 +981,72 @@ header ul li{
 
 /*------------------------
  menu accordion with checkbox
+--------------------------*/
+
+.accordion-container {
+    text-align: left;
+    margin: 10px auto 30px auto;
+    position: relative;
+  }
+  .accordion-container input[type=checkbox]{
+    background-color: transparent;
+    border: 1px solid transparent;
+    height: 1px;
+    position: absolute;
+    width: 1px;
+    margin: 4px 0 0 0;
+    outline: none;
+  }
+  .accordion-container input[type=checkbox] + label{
+      background: #EEEEEE;
+      border-bottom: 1px solid #fff;
+      color: #333;
+      cursor: pointer;
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 32px;
+      padding: 10px 85px;
+      position: relative;
+      z-index: 2;
+  }
+
+
+  
+  .accordion-container input[type=checkbox] + label:hover{ background: #D6D6D6; }
+  .accordion-container input[type=checkbox]:checked + label{ background: #EEEEEE; }
+  .accordion-container input[type=checkbox]:focus + label{ background: #BEBEBE; }
+  .accordion-container input[type=checkbox]:checked + label:hover{ background: #D6D6D6; }
+  .accordion-container input[type=checkbox]:checked + label:after{transform: rotate(90deg);}
+  
+  .accordion-container label {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Montserrat';
+      font-weight: 900;
+      
+      text-transform: uppercase;
+  }
+  
+  
+  .accordion-container input[type=checkbox] + label + .accordion-content{
+    display: none;
+    /* display: none; - Content is ignored by screen readers, additionally stops tabbing through hidden content */
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+    /* 0, 0, hidden; - Content is ignored by screen readers, but tab key still steps through hidden elements */
+    transition: all 1.5s ease-in-out;
+  }
+  .accordion-container input[type=checkbox]:checked + label + .accordion-content,
+  .accordion-container input[type=radio]:checked + label + .accordion-content {
+    display: block;
+    height: auto;
+    max-height: 2000px;
+    transition: all 1.5s ease-in-out;
+  }
+
+  /*------------------------
+ listing module
 --------------------------*/
 
 .accordion-container {

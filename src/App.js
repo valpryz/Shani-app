@@ -1,14 +1,13 @@
 import React from 'react';
-// import TableauDeBordAdmin from './components/TableauDeBordAdmin'
-import TableauDeBordTeacher from './components/TableauDeBordTeacher';
+import TableauDeBordAdmin from './components/TableauDeBordAdmin'
+
 
 class App extends React.Component {
   render(){
     return (
-      <TableauDeBordTeacher />
-    );
-  }
-  
+      <TableauDeBordAdmin />
+    )
+}
 }
 
 export default App;

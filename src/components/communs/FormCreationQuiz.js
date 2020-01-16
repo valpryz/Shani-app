@@ -15,7 +15,7 @@ const WrapperLeft = styled.div`
 `
 
 const WrapperRight = styled.div`
-
+  margin: 0 auto;
 `
 
 class FormCreationQuiz extends React.Component {
@@ -39,11 +39,11 @@ class FormCreationQuiz extends React.Component {
               <h2>modules</h2>
               <p><em>si vous creez un quiz pour le cours, alors module correspond a un module. Si vous creez un quiz pour la lecon, alors vous n'avez pas besoin de creer un module supplementaire.</em></p>
             </div>
-            <button>+</button>
+            <button className='button-square'>+</button>
             <QuizTab></QuizTab>    
           </WrapperLeft>
           <WrapperRight>
-           <button>Enregistrez</button>
+           <button>Enregistrer</button>
           </WrapperRight>
       </WrapperFull>
     </form>
