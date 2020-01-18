@@ -10,6 +10,11 @@ import ListingUtilisateurs from "./ListingUtilisateurs";
 import FormCreationCours from "./FormCreationCours";
 import FormCreationModule from "./FormCreationModule";
 import FormCreationQuiz from "./FormCreationQuiz";
+import professeur from '../communs/assets/layers/professor-consultation.png'
+import etudiant from '../communs/assets/layers/student-bold.png'
+import cours from '../communs/assets/layers/online-class.png'
+import inscrits from '../communs/assets/layers/save-money.png'
+import quiz from '../communs/assets/layers/diploma.png'
 
 const WrapperFull = styled.div`
   display: grid;
@@ -30,6 +35,7 @@ const CartesWrapper = styled.div`
   width: calc(100% - 30px);
   grid-template-columns: repeat(4,1fr);
   grid-gap: 30px 10px;
+  margin-bottom: 40px;
 `
 
 class NavigationTab extends React.Component {
@@ -64,11 +70,11 @@ class NavigationTab extends React.Component {
         <WrapperFull>
           <WrapperLeft>
             <CartesWrapper>
-              <Carte />
-              <Carte />
-              <Carte />
-              <Carte />
-              <Carte />
+              <Carte titre='formateurs' valeur='0' image={professeur}/>
+              <Carte titre='etudiants' valeur='0' image={etudiant}/>
+              <Carte titre='cours' valeur='0' image={cours}/>
+              <Carte titre='inscrits' valeur='0' image={inscrits}/>
+              <Carte titre='quiz completes' valeur='0' image={quiz}/>
             </CartesWrapper>
             <AccordionContainerCours>
               <AccordionCourseContent />

@@ -1,8 +1,8 @@
 
 import React from "react";
 import SelectionCoursAModifier from "./SelectionCoursAModifier";
-import BoutonsSpeciaux from "./BoutonsSpeciaux";
 import styled from 'styled-components';
+import BlocEditionLecon from "./BlocEditionLecon";
 
 const WrapperFull = styled.div`
   display: grid;
@@ -16,7 +16,7 @@ const WrapperLeft = styled.div`
 `
 
 const WrapperRight = styled.div`
-
+  margin: 0 auto;
 `
 
 class FormEditionCoursTeacher extends React.Component {
@@ -25,13 +25,8 @@ class FormEditionCoursTeacher extends React.Component {
       <form>
         <WrapperFull>
           <WrapperLeft>
-            <SelectionCoursAModifier />
-            <h4>initiation a l'entreprenariat</h4>
-            <h4>resume de la lecon</h4>
-            <textarea name="resume-teacher" id="resume-teacher" defaultValue={"Learn inbound marketing techniques that range from content creation to social promotion to converting and nurturing leads and beyond. By the end of this certification course, you'll be well on your way to building your inbound marketing strategy."} />
-            <div className="composants" />
-            <BoutonsSpeciaux />
-            <h4>ressources de la lecon</h4>
+            <SelectionCoursAModifier />          
+            <BlocEditionLecon />
         
           </WrapperLeft>
           <WrapperRight>

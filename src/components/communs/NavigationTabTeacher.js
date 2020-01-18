@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import FormEditionCoursTeacher from './FormEditionCoursTeacher';
+import cours from '../communs/assets/layers/online-class.png'
 import Carte from './Carte'
 import CarteDeCours from './CarteDeCours';
 
@@ -12,11 +13,12 @@ const WrapperFull = styled.div`
 `
 
 const WrapperLeft = styled.div`
-
+  display: grid;
+  grid-row-gap: 25px;
 `
 
 const WrapperRight = styled.div`
-
+  
 `
 
 const WrapperCourse = styled.div`
@@ -45,7 +47,7 @@ class NavigationTabTeacher extends React.Component {
     <div className="tab1">
         <WrapperFull>
           <WrapperLeft>
-            <Carte />
+            <Carte titre='cours' valeur='0' image={cours}/>
             <h1>Cours</h1>
             <WrapperCourse>
                 <CarteDeCours />

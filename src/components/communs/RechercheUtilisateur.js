@@ -1,6 +1,6 @@
 
 import React from "react";
-import circle from '../communs/assets/icon/navigation/expand_more_24px_outlined.svg'
+import modal from '../communs/assets/icon/content/add_circle_outline_24px_outlined.svg'
 
 class RechercheUtilisateur extends React.Component {
   render() {
@@ -8,7 +8,7 @@ class RechercheUtilisateur extends React.Component {
       <div className="searchbox">
   <div className="title">
     <h1>utilisateurs</h1>
-    <img src={circle} alt='modal creation user' />
+    <button className='button-modal'><img src={modal} alt='modal creation user' /></button>
   </div>
   <input type="text" name="searchbox" id="searchbox" />
     </div>

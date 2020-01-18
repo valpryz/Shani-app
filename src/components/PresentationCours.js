@@ -10,9 +10,15 @@ const TouteLaPage = styled.div`
 `
 const HeadInfo = styled.div`
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1.1fr;
     grid-gap: 20px;
-    padding: 35px;
+    margin: 15px 35px;
+    
+`
+const Video = styled.div`
+    margin: auto auto 50px 35px;
+    display: grid;
+    grid-row-gap: 20px;
 `
 class PresentationCours extends React.Component {
     render(){
@@ -23,8 +29,10 @@ class PresentationCours extends React.Component {
                     <StudentCourseInfo />
                     <StudentProfileCard />
                 </HeadInfo>
-                <h1>Presentation de la formation</h1>
-                <ReactPlayer url='https://www.youtube.com/watch?v=TTSxaWiNrBE' width='720px' height='480px'/>
+                <Video>
+                    <h1>Presentation de la formation</h1>
+                    <ReactPlayer url='https://www.youtube.com/watch?v=TTSxaWiNrBE' width='94vw' height='100vh'/>
+                    </Video>
                 <h1>Programme</h1>
             </TouteLaPage>
         )

@@ -6,7 +6,7 @@ class TabQuestionDeQuiz extends React.Component {
     return <div className="bloc-question">
   <label htmlFor="question">Question</label>
   <textarea name="question" id="question" cols={30} rows={10} defaultValue={""} />
-  <button className='button-poubelle'><img src={deletion} /></button>
+  <button className='button-poubelle'><img src={deletion} alt='delete'/></button>
     </div>;
   }
 
