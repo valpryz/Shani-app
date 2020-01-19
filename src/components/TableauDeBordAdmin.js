@@ -15,7 +15,7 @@ class TableauDeBordAdmin extends React.Component {
     return (
       <TouteLaPage>
         <Header />
-        <EnteteDePage />
+        <EnteteDePage title='Tableau de Bord' resume="Retrouvez ici une vue d'ensemble des utilisateurs, cours, webinaires et groupes de discussion."/>
         <NavigationTab />
       </TouteLaPage>
     );

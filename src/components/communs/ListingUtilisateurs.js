@@ -7,14 +7,8 @@ class ListingUtilisateurs extends React.Component {
     return (
       <div className="list-users">
         <h4>nom</h4>
+        <CarteDuListing />  
         <CarteDuListing /> 
-        <CarteDuListing /> 
-        <CarteDuListing /> 
-        <CarteDuListing /> 
-        <CarteDuListing /> 
-        <CarteDuListing /> 
-        <CarteDuListing /> 
-        <CarteDuListing />   
     </div>
     )
   }

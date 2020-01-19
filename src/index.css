@@ -819,11 +819,20 @@ select#course {
     border: 1.3px solid lightgrey;
     background: none;
     font-size: 1.1em;
+    padding-left: 25px;
+}
+
+.form-create-user-left #send-mail {
+    margin-right: 12px;
 }
 
 .form-create-user-left .valid {
     display: flex;
     align-items: center;
+}
+
+.form-create-user-right {
+    margin: 0 auto;
 }
 
 /*------------------------
