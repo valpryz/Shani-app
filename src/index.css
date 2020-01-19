@@ -111,6 +111,11 @@ button {
     
 }
 
+.lecon-module {
+    position: relative;
+    top: 10px;
+}
+
 /*------------------------
         custom checkbox sur le site
 --------------------------*/
@@ -563,7 +568,7 @@ select#course {
 .lecon-creation .top {
     grid-column: span 2;
     display: grid;
-    grid-template-columns: 3.2fr 2fr 100px;
+    grid-template-columns: 3fr 2fr;
     grid-gap: 10px;
     align-items: center;
 }
@@ -575,7 +580,7 @@ select#course {
 
 .top .attribution label {
     text-transform:  lowercase;
-    font-size: .9em;
+    font-size: .8em;
     font-weight: 100;
     padding: 3px 0 0 3px;
 }
@@ -584,7 +589,10 @@ select#course {
     border: none;
     width: 100%;
     height: 65%;
+    font-weight: 300;
     background: none;
+    font-family: 'Source Sans Pro';
+    font-size: 1.1em;
 }
 
 .lecon-creation > img {
@@ -872,7 +880,6 @@ select#course {
 .bloc-edition-lecon .image-top {
     display: grid;
     grid-template-columns: 5fr 2fr;
-    align-items: 
 }
 
 .bloc-edition-lecon .image-top button {
@@ -1224,12 +1231,13 @@ select#course {
  listing module
 --------------------------*/
 
-.accordion-container {
+.accordion-module-container {
     text-align: left;
     margin: 10px auto 30px auto;
     position: relative;
+    width: 100%;
   }
-  .accordion-container input[type=checkbox]{
+  .accordion-module-container input[type=checkbox]{
     background-color: transparent;
     border: 1px solid transparent;
     height: 1px;
@@ -1238,7 +1246,7 @@ select#course {
     margin: 4px 0 0 0;
     outline: none;
   }
-  .accordion-container input[type=checkbox] + label{
+  .accordion-module-container input[type=checkbox] + label{
       background: #EEEEEE;
       border-bottom: 1px solid #fff;
       color: #333;
@@ -1253,13 +1261,13 @@ select#course {
 
 
   
-  .accordion-container input[type=checkbox] + label:hover{ background: #D6D6D6; }
-  .accordion-container input[type=checkbox]:checked + label{ background: #EEEEEE; }
-  .accordion-container input[type=checkbox]:focus + label{ background: #BEBEBE; }
-  .accordion-container input[type=checkbox]:checked + label:hover{ background: #D6D6D6; }
-  .accordion-container input[type=checkbox]:checked + label:after{transform: rotate(90deg);}
+  .accordion-module-container input[type=checkbox] + label:hover{ background: #D6D6D6; }
+  .accordion-module-container input[type=checkbox]:checked + label{ background: #EEEEEE; }
+  .accordion-module-container input[type=checkbox]:focus + label{ background: #BEBEBE; }
+  .accordion-module-container input[type=checkbox]:checked + label:hover{ background: #D6D6D6; }
+  .accordion-module-container input[type=checkbox]:checked + label:after{transform: rotate(90deg);}
   
-  .accordion-container label {
+  .accordion-module-container label {
       display: flex;
       justify-content: space-between;
       font-family: 'Montserrat';
@@ -1269,7 +1277,7 @@ select#course {
   }
   
   
-  .accordion-container input[type=checkbox] + label + .accordion-content{
+  .accordion-module-container input[type=checkbox] + label + .accordion-module-content{
     display: none;
     /* display: none; - Content is ignored by screen readers, additionally stops tabbing through hidden content */
     height: 0;
@@ -1277,9 +1285,78 @@ select#course {
     overflow: hidden;
     /* 0, 0, hidden; - Content is ignored by screen readers, but tab key still steps through hidden elements */
     transition: all 1.5s ease-in-out;
+    margin-top: 20px;
   }
-  .accordion-container input[type=checkbox]:checked + label + .accordion-content,
-  .accordion-container input[type=radio]:checked + label + .accordion-content {
+  .accordion-module-container input[type=checkbox]:checked + label + .accordion-module-content,
+  .accordion-module-container input[type=radio]:checked + label + .accordion-module-content {
+    display: block;
+    height: auto;
+    max-height: 2000px;
+    transition: all 1.5s ease-in-out;
+  }
+
+  /*------------------------
+ listing lecons
+--------------------------*/
+
+.accordion-lecon-container {
+    text-align: left;
+    margin: 10px auto 30px auto;
+    position: relative;
+    width: 100%;
+  }
+  .accordion-lecon-container input[type=checkbox]{
+    background-color: transparent;
+    border: 1px solid transparent;
+    height: 1px;
+    position: absolute;
+    width: 1px;
+    margin: 4px 0 0 0;
+    outline: none;
+  }
+  .accordion-lecon-container input[type=checkbox] + label{
+      background: #EEEEEE;
+      border-bottom: 1px solid #fff;
+      color: #333;
+      cursor: pointer;
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 32px;
+      padding: 10px 85px;
+      position: relative;
+      z-index: 2;
+  }
+
+
+  
+  .accordion-lecon-container input[type=checkbox] + label:hover{ background: #D6D6D6; }
+  .accordion-lecon-container input[type=checkbox]:checked + label{ background: #EEEEEE; }
+  .accordion-lecon-container input[type=checkbox]:focus + label{ background: #BEBEBE; }
+  .accordion-lecon-container input[type=checkbox]:checked + label:hover{ background: #D6D6D6; }
+  .accordion-lecon-container input[type=checkbox]:checked + label:after{transform: rotate(90deg);}
+  
+  .accordion-lecon-container label {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Montserrat';
+      font-weight: 900;
+      
+      text-transform: uppercase;
+  }
+  
+  
+  .accordion-lecon-container input[type=checkbox] + label + .accordion-lecon-content{
+    display: none;
+    /* display: none; - Content is ignored by screen readers, additionally stops tabbing through hidden content */
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+    /* 0, 0, hidden; - Content is ignored by screen readers, but tab key still steps through hidden elements */
+    transition: all 1.5s ease-in-out;
+    margin-top: 20px;
+  }
+  .accordion-lecon-container input[type=checkbox]:checked + label + .accordion-lecon-content,
+  .accordion-lecon-container input[type=radio]:checked + label + .accordion-lecon-content {
     display: block;
     height: auto;
     max-height: 2000px;

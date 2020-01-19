@@ -8,11 +8,11 @@ class BlocDemarrage extends React.Component {
       <div className="bloc-demarrage">
         <img src={Logo} alt="logo-hannibal-incubator" />
         <h1>Vous n'avez pas encore de compte sur Hannibal Incubator ?</h1>
-        <p>Plus de 820 futurs entrepreneurs sont deja sur la plateforme, pour beneficier de tous nos avantages.</p>
-        <button>demarrer</button>
+        <p>Plus de 820 futurs entrepreneurs sont déja sur la plateforme, pour bénéficier de tous nos avantages.</p>
+        <button>démarrer</button>
       </div>
     )
-  }
+  }  
 
 }
 

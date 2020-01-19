@@ -5,11 +5,7 @@ class AccordionQuizContent extends React.Component {
   render() {
     return (
         <div>
-            <ItemDeQuiz />
-            <ItemDeQuiz />
-            <ItemDeQuiz />
-            <ItemDeQuiz />
-            <ItemDeQuiz />
+            <p>Comming Soon...</p>
         </div>
     )
   }

@@ -9,12 +9,13 @@ import RechercheUtilisateur from "./RechercheUtilisateur";
 import ListingUtilisateurs from "./ListingUtilisateurs";
 import FormCreationCours from "./FormCreationCours";
 import FormCreationModule from "./FormCreationModule";
-import FormCreationQuiz from "./FormCreationQuiz";
+// import FormCreationQuiz from "./FormCreationQuiz";
 import professeur from '../communs/assets/layers/professor-consultation.png'
 import etudiant from '../communs/assets/layers/student-bold.png'
 import cours from '../communs/assets/layers/online-class.png'
 import inscrits from '../communs/assets/layers/save-money.png'
 import quiz from '../communs/assets/layers/diploma.png'
+import FormCreationLecon from "./FormCreationLecon";
 
 const WrapperFull = styled.div`
   display: grid;
@@ -46,10 +47,11 @@ class NavigationTab extends React.Component {
   <input type="radio" name="tab" id="tab3" />
   <input type="radio" name="tab" id="tab4" />
   <input type="radio" name="tab" id="tab5" />
+  
   <nav>
     <ul>
       <li className="tab1">
-        <label htmlFor="tab1">apercu</label>
+        <label htmlFor="tab1">aperçu</label>
       </li>
       <li className="tab2">
         <label htmlFor="tab2">utilisateurs</label>
@@ -61,7 +63,7 @@ class NavigationTab extends React.Component {
         <label htmlFor="tab4">modules</label>
       </li>
       <li className="tab5">
-        <label htmlFor="tab5">quiz</label>
+        <label htmlFor="tab5">leçon</label>
       </li>
     </ul>
   </nav>
@@ -71,10 +73,10 @@ class NavigationTab extends React.Component {
           <WrapperLeft>
             <CartesWrapper>
               <Carte titre='formateurs' valeur='0' image={professeur}/>
-              <Carte titre='etudiants' valeur='0' image={etudiant}/>
+              <Carte titre='étudiants' valeur='0' image={etudiant}/>
               <Carte titre='cours' valeur='0' image={cours}/>
               <Carte titre='inscrits' valeur='0' image={inscrits}/>
-              <Carte titre='quiz completes' valeur='0' image={quiz}/>
+              <Carte titre='quiz complétés' valeur='0' image={quiz}/>
             </CartesWrapper>
             <AccordionContainerCours>
               <AccordionCourseContent />
@@ -106,7 +108,7 @@ class NavigationTab extends React.Component {
       <FormCreationModule /> 
     </div>
     <div className="tab5">
-      <FormCreationQuiz />
+      <FormCreationLecon />
     </div>
   </section>
     </div>;

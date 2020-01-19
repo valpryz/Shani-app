@@ -26,12 +26,12 @@ class FormCreationCours extends React.Component {
             <div className="info-gnr">
               <h2>informations gÉnÉrales</h2>
               <input type="text" name id="titre" placeholder="Bataillon des entrepreneurs panafricains" />
-              <input type="text" name="categorie" id="categorie" placeholder="Categorie" />
+              <input type="text" name="categorie" id="categorie" placeholder="Catégorie" />
               <select name="cout" id="cout"> 
-                <option value="cout">Cout</option>
+                <option value="cout">Coût</option>
               </select>
               <div className="etiquette">
-                <label htmlFor="etiquette">Etiquettes</label>
+                <label htmlFor="etiquette">Étiquettes</label>
                 <input type="text" name="etiquette" id="etiquette" placeholder="Ajouter des etiquettes a votre cours" />
               </div>
               <div className="auteur">
